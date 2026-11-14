@@ -1,0 +1,4 @@
+asset_id,hostname,ip_address,software,version,internet_exposed,environment
+A001,web01,10.0.0.10,PHP,8.1.5,true,production
+A002,web02,10.0.0.20,PHP,8.3.2,false,production
+A003,db01,10.0.0.30,MySQL,8.0.32,false,production

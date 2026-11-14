@@ -1,0 +1,117 @@
+
+{
+  "metadata": {
+    "project": "DeceptIQ",
+    "report_version": "1.0",
+    "generated_at": "2026-11-14T10:10:00",
+    "environment": "hackathon-demo"
+  },
+
+  "summary": {
+    "total_assets": 3,
+    "vulnerable_assets": 1,
+    "suspicious_assets": 2,
+    "total_alerts": 3,
+    "critical_alerts": 0,
+    "high_alerts": 1,
+    "medium_alerts": 1,
+    "low_alerts": 1,
+    "anomalies_detected": 1,
+    "honeypot_interactions": 3
+  },
+
+  "assets": [
+    {
+      "asset_id": "A001",
+      "hostname": "web01",
+      "ip_address": "10.0.0.10",
+      "risk_score": 75,
+      "risk_level": "HIGH",
+      "internet_exposed": true,
+      "findings": {
+        "vulnerability": true,
+        "suspicious_http": true,
+        "brute_force": false,
+        "port_scan": true,
+        "ml_anomaly": false
+      },
+      "cves": [],
+      "remediation_status": "OPEN"
+    },
+    {
+      "asset_id": "A002",
+      "hostname": "web02",
+      "ip_address": "10.0.0.20",
+      "risk_score": 25,
+      "risk_level": "LOW",
+      "internet_exposed": false,
+      "findings": {
+        "vulnerability": false,
+        "suspicious_http": false,
+        "brute_force": true,
+        "port_scan": false,
+        "ml_anomaly": false
+      },
+      "cves": [],
+      "remediation_status": "OPEN"
+    }
+  ],
+
+  "alerts": [
+    {
+      "alert_id": "ALT001",
+      "timestamp": "2026-11-14T10:00:08",
+      "asset_id": "A001",
+      "source_ip": "192.0.2.50",
+      "alert_type": "SUSPICIOUS_HTTP",
+      "severity": "HIGH",
+      "description": "Multiple suspicious paths accessed",
+      "risk_score": 75,
+      "recommended_action": "Investigate source and review application security"
+    },
+    {
+      "alert_id": "ALT002",
+      "timestamp": "2026-11-14T10:02:10",
+      "asset_id": "A002",
+      "source_ip": "192.0.2.70",
+      "alert_type": "BRUTE_FORCE",
+      "severity": "MEDIUM",
+      "description": "Multiple failed login attempts detected",
+      "risk_score": 25,
+      "recommended_action": "Review authentication activity"
+    }
+  ],
+
+  "honeypot": {
+    "status": "ACTIVE",
+    "total_interactions": 3,
+    "unique_source_ips": 2,
+    "events": [
+      {
+        "event_id": "HP001",
+        "source_ip": "192.0.2.50",
+        "path": "/admin",
+        "method": "GET",
+        "timestamp": "2026-11-14T10:05:00"
+      }
+    ]
+  },
+
+  "routing": [
+    {
+      "source_ip": "192.0.2.50",
+      "action": "HONEYPOT",
+      "reason": "High-confidence suspicious activity",
+      "status": "PENDING"
+    }
+  ],
+
+  "anomalies": [
+    {
+      "asset_id": "A003",
+      "detected": false,
+      "anomaly_score": null,
+      "description": "No anomaly detected"
+    }
+  ]
+}

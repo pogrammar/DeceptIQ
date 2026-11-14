@@ -1,0 +1,35 @@
+
+{
+  "events": [
+    {
+      "event_id": "HP001",
+      "timestamp": "2026-11-14T10:05:00",
+      "source_ip": "192.0.2.50",
+      "method": "GET",
+      "path": "/admin",
+      "user_agent": "ExampleScanner/1.0",
+      "event_type": "honeypot_interaction",
+      "interaction_type": "suspicious_path_access"
+    },
+    {
+      "event_id": "HP002",
+      "timestamp": "2026-11-14T10:05:10",
+      "source_ip": "192.0.2.50",
+      "method": "POST",
+      "path": "/login",
+      "user_agent": "ExampleScanner/1.0",
+      "event_type": "honeypot_interaction",
+      "interaction_type": "login_attempt"
+    },
+    {
+      "event_id": "HP003",
+      "timestamp": "2026-11-14T10:05:20",
+      "source_ip": "192.0.2.80",
+      "method": "GET",
+      "path": "/random-config.php",
+      "user_agent": "Unknown",
+      "event_type": "honeypot_interaction",
+      "interaction_type": "unknown_endpoint_access"
+    }
+  ]
+}

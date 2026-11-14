@@ -1,0 +1,10 @@
+
+timestamp,asset_id,source_ip,method,path,status,user_agent
+2026-11-14T10:00:06,A001,192.0.2.50,GET,/.env,404,ExampleScanner/1.0
+2026-11-14T10:00:07,A001,192.0.2.50,GET,/config.php,404,ExampleScanner/1.0
+2026-11-14T10:00:08,A001,192.0.2.50,GET,/admin,403,ExampleScanner/1.0
+2026-11-14T10:01:00,A001,192.0.2.60,GET,/home,200,Mozilla/5.0
+2026-11-14T10:01:10,A001,192.0.2.60,GET,/products,200,Mozilla/5.0
+2026-11-14T10:02:00,A002,192.0.2.70,POST,/login,401,Mozilla/5.0
+2026-11-14T10:02:05,A002,192.0.2.70,POST,/login,401,Mozilla/5.0
+2026-11-14T10:02:10,A002,192.0.2.70,POST,/login,401,Mozilla/5.0
