@@ -1,4 +1,3 @@
-
 timestamp,asset_id,source_ip,method,path,status,user_agent
 2026-11-14T10:00:06,A001,192.0.2.50,GET,/.env,404,ExampleScanner/1.0
 2026-11-14T10:00:07,A001,192.0.2.50,GET,/config.php,404,ExampleScanner/1.0

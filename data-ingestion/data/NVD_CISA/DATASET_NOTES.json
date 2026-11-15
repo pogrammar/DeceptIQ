@@ -1,0 +1,22 @@
+{
+  "generated_from_uploaded_files": {
+    "NVD_CVE": "NVD_CVE(1).json",
+    "NVD_CPE": "NVD_CPE(1).json",
+    "NVD_CPEM": "NVD_CPEM(1).json",
+    "CISA": "CISA(1).json"
+  },
+  "scope": "PHP interpreter and MySQL server CPE product families found in retrieved CVE records",
+  "counts": {
+    "source_cve_records": 15538,
+    "curated_cve_records": 2047,
+    "unique_cpe_match_criteria": 1530,
+    "unique_cpe_criteria": 819,
+    "filtered_cisa_kev_entries": 5
+  },
+  "important_limitations": [
+    "NVD_CPEM.json is a curated reference set reconstructed from CPE match entries embedded in the downloaded CVE records. It is not a full independent download of the NVD CPE Match API catalogue.",
+    "NVD_CPE.json is a CPE reference index extracted from CVE configurations, not the full NVD CPE API catalogue. CPE catalogue metadata such as official titles, deprecated flags, and CPE UUIDs is not invented.",
+    "The source CVE download was based on keyword searches for MySQL and PHP. It may not include every vulnerability relevant to these products.",
+    "Validate affected version ranges and CPE product identity against each asset before reporting a vulnerability."
+  ]
+}
