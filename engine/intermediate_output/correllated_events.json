@@ -1,0 +1,14 @@
+[
+    {
+        "asset_id": "A001",
+        "Vulnerability": false,
+        "Suspicious_HTTP": true,
+        "Brute_Force": false
+    },
+    {
+        "asset_id": "A002",
+        "Vulnerability": false,
+        "Suspicious_HTTP": false,
+        "Brute_Force": true
+    }
+]

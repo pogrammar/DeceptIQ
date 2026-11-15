@@ -1,0 +1,162 @@
+{
+  "module": "DeceptIQ Anomaly Detection",
+  "generated_at": "2026-11-15T10:04:48.184177+00:00",
+  "model": "IsolationForest",
+  "training_observations": 7,
+  "features_used": [
+    "request_count",
+    "http_404_count",
+    "sensitive_request_count",
+    "failed_login_count",
+    "unique_paths",
+    "path_traversal_count"
+  ],
+  "training_note": "Hackathon demonstration model trained on the currently available sample logs. Collect more normal baseline traffic and labelled incidents before production use.",
+  "summary": {
+    "total_observations": 7,
+    "anomalies_detected": 2,
+    "normal_observations": 5
+  },
+  "findings": [
+    {
+      "observation_id": "bfa25386-b2bb-4b86-ae80-2eac574d1210",
+      "source": "network_logs",
+      "asset_id": null,
+      "source_ip": "192.0.2.15",
+      "timestamp": "2026-11-14T12:00:00.800000Z",
+      "detected": false,
+      "anomaly_score": 0.13166,
+      "severity": "NORMAL",
+      "description": "No anomaly detected by the trained model",
+      "features": {
+        "request_count": 3,
+        "http_404_count": 3,
+        "sensitive_request_count": 3,
+        "failed_login_count": 0,
+        "unique_paths": 3,
+        "path_traversal_count": 0
+      },
+      "evidence": "/.env;/.git/config;/backup.zip"
+    },
+    {
+      "observation_id": "3f514004-5c3b-4fe2-b1a5-e0129425e58c",
+      "source": "network_logs",
+      "asset_id": null,
+      "source_ip": "192.0.2.15",
+      "timestamp": "2026-11-14T12:00:07.600000Z",
+      "detected": false,
+      "anomaly_score": 0.04309,
+      "severity": "NORMAL",
+      "description": "No anomaly detected by the trained model",
+      "features": {
+        "request_count": 20,
+        "http_404_count": 20,
+        "sensitive_request_count": 20,
+        "failed_login_count": 0,
+        "unique_paths": 5,
+        "path_traversal_count": 0
+      },
+      "evidence": "/.env;/.git/config;/backup.zip;/config.php;/phpmyadmin"
+    },
+    {
+      "observation_id": "fd9607ce-da46-4a7c-9cc7-8532ee89f32b",
+      "source": "network_logs",
+      "asset_id": null,
+      "source_ip": "192.0.2.15",
+      "timestamp": "2026-11-14T12:00:39.600000Z",
+      "detected": false,
+      "anomaly_score": 0.01039,
+      "severity": "NORMAL",
+      "description": "No anomaly detected by the trained model",
+      "features": {
+        "request_count": 100,
+        "http_404_count": 100,
+        "sensitive_request_count": 25,
+        "failed_login_count": 0,
+        "unique_paths": 5,
+        "path_traversal_count": 0
+      },
+      "evidence": "/.env;/.git/config;/backup.zip;/config.php;/phpmyadmin"
+    },
+    {
+      "observation_id": "e944a271-d844-4a29-ba32-a2c8ae723124",
+      "source": "network_logs",
+      "asset_id": null,
+      "source_ip": "192.0.2.15",
+      "timestamp": "2026-11-14T12:00:46Z",
+      "detected": true,
+      "anomaly_score": -0.10786,
+      "severity": "HIGH",
+      "description": "Unusual activity pattern identified by Isolation Forest",
+      "features": {
+        "request_count": 113,
+        "http_404_count": 112,
+        "sensitive_request_count": 25,
+        "failed_login_count": 0,
+        "unique_paths": 6,
+        "path_traversal_count": 1
+      },
+      "evidence": "/.env;/.git/config;/backup.zip;/config.php;/phpmyadmin;/../../etc/passwd"
+    },
+    {
+      "observation_id": "WEB-A001-192.0.2.50",
+      "source": "server_logs",
+      "asset_id": "A001",
+      "source_ip": "192.0.2.50",
+      "timestamp": "2026-11-14T10:00:08",
+      "detected": false,
+      "anomaly_score": 0.13622,
+      "severity": "NORMAL",
+      "description": "No anomaly detected by the trained model",
+      "features": {
+        "request_count": 3,
+        "http_404_count": 2,
+        "sensitive_request_count": 3,
+        "failed_login_count": 0,
+        "unique_paths": 3,
+        "path_traversal_count": 0
+      },
+      "evidence": "/.env;/config.php;/admin"
+    },
+    {
+      "observation_id": "WEB-A001-192.0.2.60",
+      "source": "server_logs",
+      "asset_id": "A001",
+      "source_ip": "192.0.2.60",
+      "timestamp": "2026-11-14T10:01:10",
+      "detected": false,
+      "anomaly_score": 0.0956,
+      "severity": "NORMAL",
+      "description": "No anomaly detected by the trained model",
+      "features": {
+        "request_count": 2,
+        "http_404_count": 0,
+        "sensitive_request_count": 0,
+        "failed_login_count": 0,
+        "unique_paths": 2,
+        "path_traversal_count": 0
+      },
+      "evidence": "/home;/products"
+    },
+    {
+      "observation_id": "WEB-A002-192.0.2.70",
+      "source": "server_logs",
+      "asset_id": "A002",
+      "source_ip": "192.0.2.70",
+      "timestamp": "2026-11-14T10:02:10",
+      "detected": true,
+      "anomaly_score": -0.01039,
+      "severity": "MEDIUM",
+      "description": "Unusual activity pattern identified by Isolation Forest",
+      "features": {
+        "request_count": 3,
+        "http_404_count": 0,
+        "sensitive_request_count": 0,
+        "failed_login_count": 3,
+        "unique_paths": 1,
+        "path_traversal_count": 0
+      },
+      "evidence": "/login;/login;/login"
+    }
+  ]
+}

@@ -1,8 +1,5 @@
-timestamp,source_ip,destination_ip,destination_port,protocol,action,bytes_sent,bytes_received
-2026-11-14T10:00:01,192.0.2.50,10.0.0.10,22,TCP,ALLOW,120,80
-2026-11-14T10:00:02,192.0.2.50,10.0.0.10,80,TCP,ALLOW,150,100
-2026-11-14T10:00:03,192.0.2.50,10.0.0.10,443,TCP,ALLOW,200,150
-2026-11-14T10:00:04,192.0.2.50,10.0.0.10,3306,TCP,ALLOW,100,50
-2026-11-14T10:00:05,192.0.2.50,10.0.0.10,3389,TCP,ALLOW,100,50
-2026-11-14T10:01:00,192.0.2.60,10.0.0.10,443,TCP,ALLOW,500,1200
-2026-11-14T10:02:00,192.0.2.70,10.0.0.20,443,TCP,ALLOW,300,900
+event_id,timestamp,source_ip,anomaly_type,window_seconds,request_count,http_404_count,sensitive_request_count,suspicious_paths,trigger_uri,detector
+bfa25386-b2bb-4b86-ae80-2eac574d1210,2026-11-14T12:00:00.800000Z,192.0.2.15,SENSITIVE_PATH_PROBING,60,3,3,3,/.env;/.git/config;/backup.zip,,nginx_log_analyzer
+3f514004-5c3b-4fe2-b1a5-e0129425e58c,2026-11-14T12:00:07.600000Z,192.0.2.15,EXCESSIVE_404_ERRORS,60,20,20,20,/.env;/.git/config;/backup.zip;/config.php;/phpmyadmin,,nginx_log_analyzer
+fd9607ce-da46-4a7c-9cc7-8532ee89f32b,2026-11-14T12:00:39.600000Z,192.0.2.15,HIGH_REQUEST_RATE,60,100,100,25,/.env;/.git/config;/backup.zip;/config.php;/phpmyadmin,,nginx_log_analyzer
+e944a271-d844-4a29-ba32-a2c8ae723124,2026-11-14T12:00:46Z,192.0.2.15,PATH_TRAVERSAL_ATTEMPT,60,113,112,25,/.env;/.git/config;/backup.zip;/config.php;/phpmyadmin,/../../etc/passwd,nginx_log_analyzer
